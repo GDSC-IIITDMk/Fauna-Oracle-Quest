@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/" method="post"></form>
+    <h2>FAUNA ORACLE QUEST</h2>
+    <link rel="stylesheet" href="/static/ani.css">
+    <form action="/play_game" method="post">
+        <div class="map">
+        <span class="question">Does it have a tail</span>   
+            <div class="clock">
+                <div>
+                    <button name="button" class="texty" value="yes">YES</button>
+                </div> 
+                <div>
+                    <button class="textn" name="button" value="no">NO</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    {% if predicted_animal %}
+        <p>Predicted Animal: {{ predicted_animal }}</p>
+    {% endif %}
+    <script src="ani.js"></script>
+</body>
+</html>
